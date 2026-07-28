@@ -17,7 +17,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="{{ asset('admin/index2.html') }}"><b>Admin</b>LTE</a>
+    <a href="{{ asset('admin/index2.html') }}"><b>Market</b>Jualan</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
@@ -90,7 +90,13 @@
 
 <script>
   $('.show-password').on('click', function(){
-    if($('#password').attr('type') == 'password')
+    if($('#password').attr('type') == 'password'){
+        $('#password').attr('type', 'text');
+        $('#password_lock').attr('class', 'fas fa-unlock');
+    }else{
+        $('#password').attr('type', 'password');
+        $('#password_lock').attr('class', 'fas fa-lock');
+    }
   })
 </script>
 </body>
